@@ -1,0 +1,5 @@
+asgiref==3.7.2
+Django==3.2.21
+django-mysql==4.10.0
+django-paypal==1.0.0
+whitenoise==6.5.0

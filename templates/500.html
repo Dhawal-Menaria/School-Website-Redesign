@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static "logofoot.png" %}" type="image/x-icon">
+    <title>500 Internal Server Error</title>
+</head>
+
+<style>
+    /* Global styles */
+* {
+    font-family: 'Google sans', Arial;
+}
+
+html, body {
+    background-color: #ffcc00;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container styles */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+    animation: colorSlide 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+/* Text center styles */
+.text-center {
+    text-align: center;
+}
+
+.text-center h1,
+.text-center h3 {
+    margin: 10px;
+    cursor: default;
+}
+
+/* Fade-in animation */
+.text-center h1 .fade-in {
+    animation: fadeIn 2s ease infinite;
+}
+
+/* Heading styles */
+.text-center h1 {
+    font-size: 8em;
+    transition: font-size 200ms ease-in-out;
+}
+.text-center h1 span#digit1 { animation-delay: 200ms; }
+.text-center h1 span#digit2 { animation-delay: 300ms; }
+.text-center h1 span#digit3 { animation-delay: 400ms; }
+
+/* Button styles */
+.text-center button {
+    border: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    transition: background-color 200ms ease-in;
+    margin: 20px 0;
+}
+
+.text-center button:hover {
+    background-color: #000000;
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+
+</style>
+
+<body>
+    <div class="flex-container">
+        <div class="text-center">
+            <img src="{% static 'logo.png' %}" alt="" width="125" height="125">
+          <h1>
+            <span class="fade-in" id="digit1">5</span>
+            <span class="fade-in" id="digit2">0</span>
+            <span class="fade-in" id="digit3">0</span>
+          </h1>
+          <h3 class="fadeIn">AWW SNAP ! INTERNAL SERVER ERROR<h3>
+          <h3 class="fadeIn">Please visit again later.<h3>
+        </div>
+      </div>
+</body>
+</html>
